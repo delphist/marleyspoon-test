@@ -1,8 +1,13 @@
 module Public
   class Recipes < Grape::API
+    helpers Public::Helpers::ContentfulHelper
+
     resource :recipes do
       get do
-        # index
+        present(
+          ListRecipesQuery.new(recipe_repository).call,
+          with: Entities::Recipe
+        )
       end
 
       params do
@@ -10,7 +15,11 @@ module Public
       end
       route_param :id do
         get do
-          # show
+          present(
+            GetRecipeQuery.new(recipe_repository, params[:id]).call,
+            with: Entities::Recipe,
+            type: :full
+          )
         end
       end
     end
