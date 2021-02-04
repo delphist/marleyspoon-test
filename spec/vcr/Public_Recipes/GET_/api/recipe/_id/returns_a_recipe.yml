@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdn.contentful.com/spaces/kk2bw5ojx476/environments/master/entries?content_type=recipe&include=1&select=fields.title,fields.description,fields.photo,fields.chef,fields.tags,sys&sys.id=4dT8tcb6ukGSIg2YyuGEOm
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      X-Contentful-User-Agent:
+      - sdk contentful.rb/2.15.4; platform ruby/2.7.2; os macOS/18;
+      Authorization:
+      - Bearer 7ac531648a1b5e1dab6c18b0979f822a5aad0fe5f1109829b8a197eb2be4b84c
+      Content-Type:
+      - application/vnd.contentful.delivery.v1+json
+      Accept-Encoding:
+      - gzip
+      Connection:
+      - close
+      Host:
+      - cdn.contentful.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '1127'
+      Access-Control-Allow-Headers:
+      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Enable-Alpha-Feature
+      Access-Control-Allow-Methods:
+      - GET,HEAD,OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Etag
+      Access-Control-Max-Age:
+      - '86400'
+      Cf-Environment-Id:
+      - master
+      Cf-Environment-Uuid:
+      - 3e111988-d2b3-4647-a0a8-ed1215cbd839
+      Cf-Organization-Id:
+      - 0OxgeKaTWSWzTukWE0scEe
+      Cf-Space-Id:
+      - kk2bw5ojx476
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/vnd.contentful.delivery.v1+json
+      Contentful-Api:
+      - cda_cached
+      Etag:
+      - W/"545913967900558018"
+      Server:
+      - Contentful
+      X-Content-Type-Options:
+      - nosniff
+      X-Contentful-Region:
+      - us-east-1
+      X-Contentful-Route:
+      - "/spaces/:space/environments/:environment/entries"
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Thu, 04 Feb 2021 07:35:42 GMT
+      Via:
+      - 1.1 varnish
+      Age:
+      - '3289'
+      X-Served-By:
+      - cache-bma1631-BMA
+      X-Cache:
+      - HIT
+      X-Cache-Hits:
+      - '2'
+      Vary:
+      - Accept-Encoding
+      X-Contentful-Request-Id:
+      - 5dc432c2-e051-4757-9925-058653a383a9
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA91XTXPbNhC9+1cgPPSQsSVSlEhJOTke1824bZrKntbtZDQQCIqwKIAGQClsxv+9C5CSKYaUnUlOoWdk4mMXbxfvAcvPJwg5qlDOFH2GV2joIqPQcs6lxIUDfY+nZo4WGqfQ79mWWrEMGq5tpGzNtBlyyzbTdG0c/msdlm5hWsxoGj0tVC7GdGpX+ysBK3SR0CjCEl1JlqY0Mm2qKNoynZh3KQv0h4QeuaEK/YTeYsVSx2AoHyeiikiWaSa4cfq64cdzvddTdAseI5oywkSuECmXwDxCSyEi9JDjlOkCLSTF0Ru0xiuKiMw5SQokONIJRSLXikUUGRshaGEM4bcaZdwMvkE4glEOsyXSW4EYX0oaMcq1QjH0YRSneAMvmfH9Cr0zvhngwYqeGlQm2GwfrI0ZYQV2akupRkRwLbHSSAsz26atjOXUAluY3BgQxiRly0SfIkljcJgAFMSFpj2bivl8jQvBOWaKzufNGEVsQ7bZMEthkjAKSExnnmq2xtrAlUxlxSkkIo0oP1tIseXgeFltY4lrPu+hCyFWBkeKP5UwKb8Xxav6HmaJ0AJ2b8cby5M6Q/e7vWPqr4yvah6sQQp9NzsmK0V1cwKLDEMC7+9fyMP7tz/fnd9dXKnrfCl+u7s2rN89j/t3q4PycTRePjG87Kvj7UBcU1cL5gbqS9jfooEappS4/T83UfEwGw/dcf7hw2pFCzYIVnXcoNvWKD5WvftovsitozJMjCi/3w7MrMen/JmMVZGsVoPFdiTuPw3D4Pm8l9EPo5uxJosgX13N3i0Hd0V+dfl+XSfRjhrNJDoEiKxpdG7OK2fgeuMzd3TmhjeeP/XH08Gg54+8f+qe8izqMhh6U9frTcbBgQHlGyYFX4PSX5TDMqQ1SJnKZopeyvDL2pqtu17nrqQbpsoTclCjtDlQAHMlmu+39xc1v60MkJQwuHKexZ0KgsvLAo6Y29nOoKS5+f1obyPGSZrDRbBPvlOSYHcfPd1IrSptZX/rTEviIzvU0HObBp5VQUPF9fwdPwkOZnapAZY/oodBOB2OepNwWKc3mBxRRJdJtya6M3tEF1+V9w5tHMtsTSG23Nk9TrdGuuN4OUO6lbLnCdw7Rw75A6wdcqnquTKktpoM1uJ4bYuyDV1i/rTe7kIp/1u1weRze7v+oOrqqA9a1VUm4pAvR26bcDrye+H4K9Tld5j8KOr6Bsbq3XfE7PrWGwxdBPWzOPPDYTwmlFCfhF48iklEJv7E9SfUdePFJDi4bkEL9nZp1HG5NF89Tr8Ppe6Sqh7RMTaMVz1Odb9evfTbydJ3XXdCyShwg/Fw4Ycx/OEFFOZBEIxdL5z0K8zzF2Hu3WfLZpkQUY1ZevhpVQlcsf9MUN5kGPphnZtWuzamL2K2Q1sW6cRYugP7VXf4OAk1nxQwDjE0Rut158FpY/2aLP9enS/fHPjheVyG07/P6MEhWavgK6TVAQatx5PHk/8BSz0ghwMPAAA=
+  recorded_at: Thu, 04 Feb 2021 07:35:32 GMT
+recorded_with: VCR 6.0.0
