@@ -1,6 +1,6 @@
 class GetRecipeQuery
-  PER_PAGE = 10.freeze
-  FIELDS = %w(sys.id fields.title fields.description fields.photo fields.chef fields.tags).freeze
+  PER_PAGE = 10
+  FIELDS = %w[sys.id fields.title fields.description fields.photo fields.chef fields.tags].freeze
 
   def initialize(repository, id)
     @repository = repository
@@ -9,8 +9,7 @@ class GetRecipeQuery
 
   def call
     repository.entry(id,
-      select: FIELDS
-    )
+                     select: FIELDS)
   end
 
   private
