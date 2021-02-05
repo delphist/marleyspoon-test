@@ -21,7 +21,7 @@ export default {
       )
     },
     getMoreRecipes: ({ commit, state }) => {
-      commit("incrementRecipesPageNumber")
+      commit("getMoreRecipesRequestStart")
 
       return api.getRecipes({
         params: { page: state.page }
@@ -33,16 +33,18 @@ export default {
     }
   },
   mutations: {
-    incrementRecipesPageNumber: (state) => {
-      state.page += 1;
-    },
     getRecipesRequestStart: (state) => {
+      state.page = 1;
       state.items = [];
       state.isLoading = true;
     },
     getRecipesRequestSuccess: (state, items) => {
       state.items = items;
       state.isLoading = false;
+    },
+    getMoreRecipesRequestStart: (state) => {
+      state.page += 1;
+      state.isLoading = true;
     },
     getMoreRecipesRequestSuccess: (state, items) => {
       state.isHavingMoreItems = (items.length !== 0);

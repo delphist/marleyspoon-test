@@ -12,6 +12,7 @@ gem 'webpacker', '~> 5.0'
 gem 'contentful'
 gem 'grape'
 gem 'grape-entity'
+gem 'redcarpet'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 
