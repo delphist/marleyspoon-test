@@ -1,6 +1,9 @@
 {
   "name": "marleyspoon-test",
   "private": true,
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint app/javascript/**/*.js"
+  },
   "dependencies": {
     "@rails/webpacker": "5.2.1",
     "axios": "^0.21.1",
@@ -13,6 +16,8 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "eslint": "^7.19.0",
+    "eslint-plugin-vue": "^7.5.0",
     "pug": "^3.0.0",
     "pug-plain-loader": "^1.1.0",
     "webpack-dev-server": "^3.11.2"
