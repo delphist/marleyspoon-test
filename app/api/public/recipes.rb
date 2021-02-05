@@ -3,9 +3,12 @@ module Public
     helpers Public::Helpers::ContentfulHelper
 
     resource :recipes do
+      params do
+        optional :page, type: Integer
+      end
       get do
         present(
-          ListRecipesQuery.new(recipe_repository).call,
+          ListRecipesQuery.new(recipe_repository, params[:page]).call,
           with: Entities::Recipe
         )
       end

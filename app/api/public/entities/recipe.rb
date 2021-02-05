@@ -11,6 +11,10 @@ module Public
         recipe.fields[:photo]&.url
       end
 
+      expose :small_description, unless: { type: :full } do |recipe|
+        recipe.fields[:description]
+      end
+
       expose :description, if: { type: :full } do |recipe|
         recipe.fields[:description]
       end
