@@ -21,7 +21,7 @@ end
 
 options = Selenium::WebDriver::Chrome::Options.new
 options.add_preference(:download, prompt_for_download: false,
-                       default_directory: '/tmp/downloads')
+                                  default_directory: '/tmp/downloads')
 
 options.add_preference(:browser, set_download_behavior: { behavior: 'allow' })
 
@@ -44,10 +44,10 @@ Capybara.register_driver :headless_chrome do |app|
   path[':session_id'] = bridge.session_id
 
   bridge.http.call(:post, path, cmd: 'Page.setDownloadBehavior',
-                   params: {
-                       behavior: 'allow',
-                       downloadPath: '/tmp/downloads'
-                   })
+                                params: {
+                                  behavior: 'allow',
+                                  downloadPath: '/tmp/downloads'
+                                })
   ###
 
   driver
