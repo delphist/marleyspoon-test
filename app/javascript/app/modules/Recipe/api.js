@@ -5,5 +5,5 @@ const getRecipe = (id, options) => {
 };
 
 export default {
-  getRecipe
+  getRecipe,
 };

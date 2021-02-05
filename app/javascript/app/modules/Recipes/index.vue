@@ -13,21 +13,21 @@
 </template>
 
 <script>
-  import { mapActions, mapState } from "vuex";
-  import LoadingSpinner from '@/app/components/LoadingSpinner'
+import { mapActions, mapState } from "vuex";
+import LoadingSpinner from "@/app/components/LoadingSpinner";
 
-  export default {
-    components: {
-      LoadingSpinner
-    },
-    mounted() {
-      this.getRecipes();
-    },
-    computed: {
-      ...mapState("recipes", ["items", "isLoading", "isHavingMoreItems"]),
-    },
-    methods: {
-      ...mapActions("recipes", ["getRecipes", "getMoreRecipes"])
-    }
-  }
+export default {
+  components: {
+    LoadingSpinner,
+  },
+  mounted() {
+    this.getRecipes();
+  },
+  computed: {
+    ...mapState("recipes", ["items", "isLoading", "isHavingMoreItems"]),
+  },
+  methods: {
+    ...mapActions("recipes", ["getRecipes", "getMoreRecipes"]),
+  },
+};
 </script>

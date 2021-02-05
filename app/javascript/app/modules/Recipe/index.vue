@@ -16,21 +16,21 @@
 </template>
 
 <script>
-  import { mapActions, mapState } from "vuex";
-  import LoadingSpinner from '@/app/components/LoadingSpinner'
+import { mapActions, mapState } from "vuex";
+import LoadingSpinner from "@/app/components/LoadingSpinner";
 
-  export default {
-    components: {
-      LoadingSpinner,
-    },
-    mounted() {
-      this.getRecipe(this.$route.params.id);
-    },
-    computed: {
-      ...mapState("recipe", ["recipe", "isLoading"]),
-    },
-    methods: {
-      ...mapActions("recipe", ["getRecipe"])
-    }
-  }
+export default {
+  components: {
+    LoadingSpinner,
+  },
+  mounted() {
+    this.getRecipe(this.$route.params.id);
+  },
+  computed: {
+    ...mapState("recipe", ["recipe", "isLoading"]),
+  },
+  methods: {
+    ...mapActions("recipe", ["getRecipe"]),
+  },
+};
 </script>

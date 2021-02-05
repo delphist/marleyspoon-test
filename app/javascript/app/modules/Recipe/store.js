@@ -4,20 +4,17 @@ export default {
   namespaced: true,
   state: {
     isLoading: false,
-    recipe: []
+    recipe: [],
   },
   actions: {
-    getRecipe: ({
-      commit
-    }, id) => {
-      commit("getRecipeRequestStart")
+    getRecipe: ({ commit }, id) => {
+      commit("getRecipeRequestStart");
 
-      return api.getRecipe(id).then(
-        result => commit("getRecipeRequestSuccess", result.data)
-      ).catch(
-        error => commit("getRecipeRequestFailure", error)
-      )
-    }
+      return api
+        .getRecipe(id)
+        .then((result) => commit("getRecipeRequestSuccess", result.data))
+        .catch((error) => commit("getRecipeRequestFailure", error));
+    },
   },
   mutations: {
     getRecipeRequestStart: (state) => {
@@ -31,6 +28,6 @@ export default {
     getRecipeRequestFailure: (state, error) => {
       state.isLoading = false;
       state.error = error;
-    }
-  }
+    },
+  },
 };
