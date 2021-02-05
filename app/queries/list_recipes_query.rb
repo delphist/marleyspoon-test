@@ -4,9 +4,9 @@ class ListRecipesQuery
   PER_PAGE = 3
   FIELDS = %w[sys.id fields.title fields.description fields.photo].freeze
 
-  def initialize(repository, page = 1)
+  def initialize(repository, page)
     @repository = repository
-    @page = page
+    @page = page || 1
   end
 
   def call

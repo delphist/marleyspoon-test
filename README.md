@@ -2,11 +2,13 @@
 
 [![Build Status](https://travis-ci.org/delphist/marleyspoon-test.svg?branch=main)](https://travis-ci.org/delphist/marleyspoon-test)
 
-![Screenshot](docs/screenshot.png)
-
 ## Overview
 
-This is an application solving a simple code challenge task https://gist.github.com/lawitschka/063f2e28bd6993cac5f8b40b991ae899.
+This is an application solving a simple [code challenge task](https://gist.github.com/lawitschka/063f2e28bd6993cac5f8b40b991ae899).
+
+## Screenshot
+
+![Screenshot](docs/screenshot.png)
 
 ## Implementation details
 
