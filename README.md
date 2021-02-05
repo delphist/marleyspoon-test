@@ -1,24 +1,20 @@
-# README
+# Marley spoon web challenge 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Screenshot](docs/screenshot.png)
 
-Things you may want to cover:
+## Overview
 
-* Ruby version
+This is an application solving a simple code challenge task https://gist.github.com/lawitschka/063f2e28bd6993cac5f8b40b991ae899.
 
-* System dependencies
+## Implementation details
 
-* Configuration
+I've decided to use ruby on rails to increase development speed and to have an opportunity to add new features fast in the future. It's using grape and grape-entity gems to expose API, webpacker + vue.js for simple SPA application.
 
-* Database creation
+## Installation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+bundle install
+yarn install
+rails s
+``` 
+Then you can go to the http://localhost:3000/ to see the result.
