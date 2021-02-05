@@ -1,6 +1,6 @@
 # Marley spoon web challenge 
 
-![Build Status](https://travis-ci.org/delphist/marleyspoon-test.svg?branch=main)(https://travis-ci.org/delphist/marleyspoon-test)
+[![Build Status](https://travis-ci.org/delphist/marleyspoon-test.svg?branch=main)](https://travis-ci.org/delphist/marleyspoon-test)
 
 ![Screenshot](docs/screenshot.png)
 
