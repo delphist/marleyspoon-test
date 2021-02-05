@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Public
   module Entities
     class Recipe < Grape::Entity

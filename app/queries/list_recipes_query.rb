@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ListRecipesQuery
   PER_PAGE = 3
   FIELDS = %w[sys.id fields.title fields.description fields.photo].freeze

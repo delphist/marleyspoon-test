@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RecipeRepository
   DEFAULT_ARGUMENTS = {
     content_type: 'recipe',
