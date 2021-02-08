@@ -6,6 +6,8 @@ matrix:
       install:
         - gem install bundler
         - bundle install
+        - yarn install
+        - NODE_ENV=test bundle exec rails webpacker:compile
       script:
         - bundle exec rubocop
         - bundle exec rspec
