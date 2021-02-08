@@ -25,5 +25,10 @@ I've decided to use ruby on rails to increase development speed and to have an o
 bundle install
 yarn install
 rails s
-``` 
+```
+
 Then you can go to the http://localhost:3000/ to see the result.
+
+## Using Postman
+
+You can see API request examples collection inside `./postman` directory
