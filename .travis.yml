@@ -1,13 +1,18 @@
-language: ruby
-rvm:
-  - 2.7.2
-node_js:
-  - 15.0.1
-before_script:
-  - gem install bundler
-  - bundle install
-  - npm install
-script:
-  - bundle exec rubocop
-  - bundle exec rspec
-  - npm run lint
+matrix:
+  include:
+    - language: ruby
+      rvm:
+        - 2.7.2
+      install:
+        - gem install bundler
+        - bundle install
+      script:
+        - bundle exec rubocop
+        - bundle exec rspec
+    - language: node_js
+      node_js:
+        - 15.0.1
+      install:
+        - yarn install
+      script:
+        - yarn run lint
