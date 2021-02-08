@@ -2,7 +2,7 @@ language: ruby
 rvm:
   - 2.7.2
 node_js:
-  - 7
+  - 15.0.1
 before_script:
   - gem install bundler
   - bundle install
