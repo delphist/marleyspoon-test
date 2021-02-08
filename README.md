@@ -14,6 +14,11 @@ This is an application solving a simple [code challenge task](https://gist.githu
 
 I've decided to use ruby on rails to increase development speed and to have an opportunity to add new features fast in the future. It's using grape and grape-entity gems to expose API, webpacker + vue.js for simple SPA application.
 
+## Requirements
+
+ - Ruby 2.7
+ - Node.js 10+
+
 ## Installation
 
 ```
