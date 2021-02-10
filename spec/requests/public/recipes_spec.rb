@@ -22,12 +22,22 @@ describe 'Public::Recipes', :vcr do
   end
 
   context 'GET /api/recipe/:id' do
+    subject { get "/api/recipes/#{id}" }
     context 'when correct id passed' do
       let(:id) { '4dT8tcb6ukGSIg2YyuGEOm' }
 
       it 'returns a recipe' do
-        get "/api/recipes/#{id}"
+        subject
         expect(response.status).to eq(200)
+      end
+    end
+
+    context 'when incorrect id passed' do
+      let(:id) { '123' }
+
+      it 'returns an error' do
+        subject
+        expect(response.status).to eq(404)
       end
     end
   end

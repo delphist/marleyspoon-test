@@ -4,6 +4,10 @@ module Public
   class Recipes < Grape::API
     helpers Public::Helpers::ContentfulHelper
 
+    rescue_from RecipeRepository::NotFound do |e|
+      error!(e, 404)
+    end
+
     resource :recipes do
       params do
         optional :page, type: Integer

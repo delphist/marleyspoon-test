@@ -17,4 +17,10 @@ describe 'Recipes', type: :system, js: true, vcr: true do
     expect(page).to have_content('Jony Chives')
     expect(page).to have_content('gluten freehealthy')
   end
+
+  it 'User trying to open unexisting recipe' do
+    visit '/recipe/1234'
+
+    expect(page).to have_content('Not found')
+  end
 end
