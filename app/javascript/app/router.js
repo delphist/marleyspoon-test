@@ -1,8 +1,9 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-import Recipe from "./modules/Recipe";
-import Recipes from "./modules/Recipes";
+import NotFound from "@/app/components/NotFound";
+import Recipe from "@/app/modules/Recipe";
+import Recipes from "@/app/modules/Recipes";
 
 Vue.use(Router);
 
@@ -19,5 +20,9 @@ export default new Router({
       name: "recipe",
       component: Recipe,
     },
+    {
+      path: "*",
+      component: NotFound
+    }
   ],
 });

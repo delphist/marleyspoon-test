@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class RecipeRepository
+  class NotFound < StandardError; end
+
   DEFAULT_ARGUMENTS = {
     content_type: 'recipe',
     include: 1
@@ -15,7 +17,10 @@ class RecipeRepository
   end
 
   def entry(id, arguments)
-    client.entry(id, DEFAULT_ARGUMENTS.merge(arguments))
+    result = client.entry(id, DEFAULT_ARGUMENTS.merge(arguments))
+    raise NotFound if result.nil?
+
+    result
   end
 
   private

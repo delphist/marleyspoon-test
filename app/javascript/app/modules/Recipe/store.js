@@ -3,6 +3,7 @@ import api from "./api";
 export default {
   namespaced: true,
   state: {
+    error: null,
     isLoading: false,
     recipe: [],
   },
@@ -18,6 +19,7 @@ export default {
   },
   mutations: {
     getRecipeRequestStart: (state) => {
+      state.error = null;
       state.recipe = null;
       state.isLoading = true;
     },
@@ -26,8 +28,8 @@ export default {
       state.isLoading = false;
     },
     getRecipeRequestFailure: (state, error) => {
-      state.isLoading = false;
       state.error = error;
+      state.isLoading = false;
     },
   },
 };

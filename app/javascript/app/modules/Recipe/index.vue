@@ -1,5 +1,6 @@
 <template lang="pug">
-  .my-3.p-3.bg-white.rounded.shadow-sm
+  not-found(:error="error" v-if="error")
+  .my-3.p-3.bg-white.rounded.shadow-sm(v-else)
     loading-spinner(v-if="isLoading")
     div(v-else)
       h4.border-bottom.border-gray.pb-2.mb-2 {{ recipe.title }}
@@ -18,16 +19,18 @@
 <script>
 import { mapActions, mapState } from "vuex";
 import LoadingSpinner from "@/app/components/LoadingSpinner";
+import NotFound from "@/app/components/NotFound";
 
 export default {
   components: {
     LoadingSpinner,
+    NotFound
   },
   mounted() {
     this.getRecipe(this.$route.params.id);
   },
   computed: {
-    ...mapState("recipe", ["recipe", "isLoading"]),
+    ...mapState("recipe", ["recipe", "isLoading", "error"]),
   },
   methods: {
     ...mapActions("recipe", ["getRecipe"]),
